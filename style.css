@@ -1,0 +1,53 @@
+body {
+  background-color: #1D1D1F;
+  height: 100vh;
+  margin: 0rem;
+  overflow: hidden; 
+}
+
+.blob {
+	background-color: #fff;
+  height: 25vmax;
+	aspect-ratio: 1/1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	background: linear-gradient(to right, aquamarine, mediumpurple);
+	animation: rotate 20s infinite;
+	/* opacity: 0.8; */
+	
+}
+
+.blur{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	backdrop-filter: blur(9vmax);
+}
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: scale(1, 1.5) rotate(180deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.main {
+	font-family: 'Space Mono', monospace;
+  color: white;
+  padding: 0rem clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  margin: 0rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  z-index: 3;
+}
